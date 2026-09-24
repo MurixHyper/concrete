@@ -1,0 +1,79 @@
+.page {
+  display: grid;
+  justify-items: start;
+  gap: var(--s3);
+  padding-top: var(--s6);
+  max-width: 880px;
+  min-height: 50vh;
+}
+.check {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--concrete-black);
+  animation: pop 500ms var(--ease) both;
+}
+@keyframes pop {
+  from {
+    scale: 0.4;
+    opacity: 0;
+  }
+}
+.lead {
+  max-width: 56ch;
+  color: var(--ash);
+  font-size: 17px;
+}
+.card {
+  width: 100%;
+  display: grid;
+  gap: var(--s3);
+  padding: var(--s3);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 15px;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s2);
+}
+.meta dt,
+.totals dt {
+  color: var(--text-2);
+  font-size: 13px;
+}
+.lines {
+  display: grid;
+  gap: 10px;
+  padding-block: var(--s2);
+  border-block: 1px solid var(--line);
+}
+.lines li,
+.totals > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s2);
+}
+.totals {
+  display: grid;
+  gap: 8px;
+}
+.totals dt {
+  font-size: 15px;
+}
+.total {
+  font-size: 18px;
+  font-weight: 700;
+}
+.total dt {
+  color: var(--text) !important;
+}
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}

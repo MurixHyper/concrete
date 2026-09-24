@@ -1,0 +1,50 @@
+.round {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  transition:
+    background-color 200ms,
+    scale 150ms;
+}
+.round:hover {
+  background: rgba(20, 20, 20, 0.95);
+}
+.round:active,
+.labelled:active {
+  scale: 0.92;
+}
+.labelled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s1);
+  min-height: 52px;
+  min-width: 52px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition:
+    border-color 200ms,
+    scale 150ms;
+}
+.labelled:hover {
+  border-color: var(--white);
+}
+.round[data-saved="true"] svg,
+.labelled[data-saved="true"] svg {
+  animation: pop 300ms var(--ease);
+}
+@keyframes pop {
+  50% {
+    scale: 1.25;
+  }
+}

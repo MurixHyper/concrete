@@ -1,0 +1,23 @@
+.wrap {
+  display: grid;
+  gap: 10px;
+}
+.text {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.text strong {
+  color: var(--text);
+}
+.track {
+  height: 3px;
+  background: var(--line-strong);
+  overflow: hidden;
+}
+.track span {
+  display: block;
+  height: 100%;
+  background: var(--white);
+  transform-origin: left;
+  transition: scale 500ms var(--ease);
+}

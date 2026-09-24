@@ -1,0 +1,98 @@
+.page {
+  padding-top: var(--s3);
+}
+.crumbs {
+  margin-bottom: var(--s3);
+}
+.layout {
+  display: grid;
+  gap: var(--s4);
+}
+.info {
+  min-width: 0;
+}
+.sticky {
+  display: grid;
+  gap: var(--s2);
+}
+.title {
+  font-size: clamp(32px, 3.4vw, 52px);
+}
+.price {
+  font-size: 20px;
+}
+.tagline {
+  color: var(--ash);
+  margin-bottom: var(--s2);
+}
+.accordion {
+  margin-top: var(--s3);
+  border-top: 1px solid var(--line);
+}
+.accordion details {
+  border-bottom: 1px solid var(--line);
+}
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+.accordion summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 400;
+  transition: rotate 250ms var(--ease);
+}
+.accordion details[open] summary::after {
+  rotate: 45deg;
+}
+.accordion details > :not(summary) {
+  padding-bottom: var(--s3);
+  color: var(--ash);
+  font-size: 15px;
+}
+.bullets {
+  display: grid;
+  gap: 6px;
+}
+.bullets li::before {
+  content: "—";
+  margin-right: 10px;
+  color: var(--graphite);
+}
+.lookTitle {
+  margin-bottom: var(--s4);
+}
+.look {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s5) var(--s2);
+}
+@media (min-width: 1000px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.5fr) minmax(360px, 1fr);
+    gap: var(--s6);
+    align-items: start;
+  }
+  .info {
+    align-self: stretch;
+  }
+  .sticky {
+    position: sticky;
+    top: calc(var(--header-h) + var(--s3));
+  }
+  .look {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s5) var(--s3);
+  }
+}

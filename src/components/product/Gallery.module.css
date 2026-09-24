@@ -1,0 +1,50 @@
+.gallery {
+  position: relative;
+  margin-inline: calc(var(--gutter) * -1);
+}
+.strip {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.strip::-webkit-scrollbar {
+  display: none;
+}
+.strip > li {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+.counter {
+  position: absolute;
+  right: var(--gutter);
+  bottom: var(--s2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.75);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+@media (min-width: 1000px) {
+  .gallery {
+    margin-inline: 0;
+  }
+  .strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s1);
+    overflow: visible;
+  }
+  /* Odd number of shots: the first one goes wide so the grid closes evenly */
+  .strip[data-odd="true"] > .first {
+    grid-column: 1 / -1;
+  }
+  .strip[data-odd="true"] > .first > div {
+    aspect-ratio: 5 / 4 !important;
+  }
+  .counter {
+    display: none;
+  }
+}

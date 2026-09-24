@@ -1,0 +1,85 @@
+.frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.img {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 500ms var(--ease);
+}
+.frame[data-state="loaded"] .img {
+  opacity: 1;
+}
+
+/* Placeholder: a quiet concrete texture, the file name and the alt text */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: clamp(12px, 3%, 24px);
+  background:
+    radial-gradient(120% 80% at 20% 10%, rgba(255, 255, 255, 0.05), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 3px),
+    linear-gradient(160deg, #2a2a2a, #1c1c1c 70%);
+}
+.placeholder::before {
+  /* Board-marked concrete: faint horizontal formwork lines */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0 calc(14.28% - 1px),
+    rgba(255, 255, 255, 0.035) calc(14.28% - 1px) 14.28%
+  );
+  pointer-events: none;
+}
+.placeholder[data-caption="top-right"] {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right;
+}
+.placeholder[data-caption="top-right"] > span {
+  max-width: 44ch;
+}
+.file {
+  position: relative;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ash);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+.alt {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--concrete-grey);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Small frames (thumbnails): just the file name, no description */
+.frame {
+  container-type: inline-size;
+}
+@container (max-width: 180px) {
+  .alt {
+    display: none;
+  }
+  .file {
+    font-size: 9px;
+    font-weight: 500;
+  }
+  .placeholder {
+    padding: 6px;
+  }
+}

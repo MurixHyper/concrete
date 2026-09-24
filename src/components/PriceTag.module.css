@@ -1,0 +1,12 @@
+.tag {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.sale {
+  color: var(--text);
+}
+.was {
+  color: var(--text-2);
+  font-weight: 400;
+  margin-left: 6px;
+}

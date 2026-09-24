@@ -1,0 +1,78 @@
+.card {
+  position: relative;
+  display: grid;
+  gap: var(--s2);
+  align-content: start;
+}
+.media {
+  position: relative;
+  overflow: hidden;
+}
+.imgLink {
+  display: block;
+}
+.imgLink > * {
+  transition: scale 700ms var(--ease);
+}
+.card:hover .imgLink > * {
+  scale: 1.03;
+}
+.card[data-soldout="true"] .imgLink {
+  opacity: 0.55;
+}
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+}
+.wish {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px var(--s2);
+  font-size: 15px;
+}
+.name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+/* Whole card clickable via the title link */
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.wish,
+.badge {
+  z-index: 1;
+}
+.price {
+  font-size: 15px;
+}
+.swatches {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 6px;
+}
+.swatches li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 520px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .name,
+  .price {
+    font-size: 14px;
+  }
+}

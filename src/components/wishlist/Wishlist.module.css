@@ -1,0 +1,110 @@
+.page {
+  padding-top: var(--s5);
+}
+.count {
+  color: var(--text-2);
+  font-size: 0.45em;
+  vertical-align: 0.9em;
+  letter-spacing: 0;
+}
+.empty {
+  display: grid;
+  justify-items: start;
+  gap: var(--s2);
+  padding: var(--s5) 0;
+  margin-top: var(--s4);
+  border-top: 1px solid var(--line);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s5) var(--s2);
+  margin-top: var(--s5);
+}
+.item {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+.media {
+  position: relative;
+}
+.remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.75);
+}
+.remove:hover {
+  background: rgba(20, 20, 20, 0.95);
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s1);
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+.name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.size {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 200ms,
+    background-color 200ms;
+}
+.size:hover {
+  border-color: var(--white);
+}
+.size:has(input:checked) {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--concrete-black);
+}
+.size:has(input:focus-visible) {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+.size[data-out="true"] {
+  color: var(--graphite);
+  border-color: var(--line);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+.item :global(.btn) {
+  min-height: 44px;
+  padding: 0 var(--s2);
+  font-size: 12px;
+}
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s5) var(--s3);
+  }
+}
