@@ -22,7 +22,7 @@ for (const img of Object.values(HOME_IMAGES)) {
   body += `| ${mark(img.src)} | \`${img.src.split("/").pop()}\` | ${img.alt} | ${img.brief} |\n`;
 }
 
-body += "\n## Products\n\nFolder: `public/images/products/`. Portrait **4:5**, at least **1600×2000 px**. ";
+body += "\n## Products\n\nFolder: `public/images/products/`. Portrait **4:5**, generated source resolution, kept without artificial upscaling. ";
 body += "Shot 1 is the one used on cards, in the cart and in search, so it should show the whole piece in its first colour.\n";
 for (const p of products) {
   body += `\n### ${p.name} · ${p.drop}\n\nFirst colour: ${COLORS[p.colors[0]].name}. Colours: ${p.colors.map((c) => COLORS[c].name).join(", ")}\n\n`;
@@ -47,7 +47,7 @@ No code changes are needed: add the file, reload, done.
 - **Format:** \`.webp\`, quality 80–85. Next.js resizes and serves the right size automatically.
 - **Look:** cold, overcast daylight, desaturated, concrete textures. No warm filters, no neon.
 - **No third-party brands.** No visible logos (HUF, Fnatic, Adidas etc.) on clothes, shoes or background — they were in the Figma draft and are removed here.
-- **People:** models with consented releases or licensed stock only.
+- **People:** this portfolio uses AI-generated fictional adult models; no real model releases or physical product photography are claimed.
 - **Alt text** already lives in code; if a shot changes, update its line in \`products.ts\` / \`editorial.ts\` so the alt matches the new photo.
 
 `;

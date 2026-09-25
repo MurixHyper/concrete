@@ -1,0 +1,190 @@
+[
+  {
+    "path": "/images/home/hero.webp",
+    "prompt": "Wide landscape shot, 16:9 or wider (min 2400px). Two models in Arch and Void hoodies, full or 3/4 length, standing in a raw concrete underpass or stairwell. Overcast, cold light, desaturated. Keep the lower-left third calm for the headline, and keep the models near the centre so the crop still works on a tall phone screen. No logos from other brands anywhere in frame."
+  },
+  {
+    "path": "/images/home/category-men.webp",
+    "prompt": "Portrait 4:5. Male model, waist-up, olive hoodie, board-marked concrete wall, soft side light."
+  },
+  {
+    "path": "/images/home/category-women.webp",
+    "prompt": "Portrait 4:5. Female model in the ash cropped hoodie sitting on pale concrete steps."
+  },
+  {
+    "path": "/images/home/category-unisex.webp",
+    "prompt": "Portrait 4:5. Two models (any genders) in matching graphite crewnecks, same pose, neutral wall."
+  },
+  {
+    "path": "/images/home/category-accessories.webp",
+    "prompt": "Portrait 4:5. Still life: black cap on a rough concrete block, hard side light, deep shadow."
+  },
+  {
+    "path": "/images/home/fabric-400gsm.webp",
+    "prompt": "Square 1:1. Macro shot of the brushed inside of the 400gsm fleece, folded edge, raking light that shows the texture."
+  },
+  {
+    "path": "/images/home/capsule-olive.webp",
+    "prompt": "Portrait 4:5 (min 1600px tall). Full-length, model in the olive Structure Hoodie and olive Cargo Pants on a rooftop, city haze behind."
+  },
+  {
+    "path": "/images/products/arch-hoodie-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Arch Hoodie: Heavyweight cotton fleece with a double-layer hood and no drawcords. Cut oversized, meant to be worn every day and last for years. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Model in the black Arch Hoodie, arms crossed, against a raw concrete wall. Context: Model in the black Arch Hoodie, arms crossed, against a raw concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/arch-hoodie-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Arch Hoodie: Heavyweight cotton fleece with a double-layer hood and no drawcords. Cut oversized, meant to be worn every day and last for years. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Back view, hood down, same concrete setting. Context: Model in the black Arch Hoodie, arms crossed, against a raw concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/arch-hoodie-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Arch Hoodie: Heavyweight cotton fleece with a double-layer hood and no drawcords. Cut oversized, meant to be worn every day and last for years. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Close-up of the brushed fleece and ribbed cuff. Context: Model in the black Arch Hoodie, arms crossed, against a raw concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/arch-hoodie-4.webp",
+    "prompt": "Portrait 4:5 high resolution. Arch Hoodie: Heavyweight cotton fleece with a double-layer hood and no drawcords. Cut oversized, meant to be worn every day and last for years. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Walking through an underpass, full outfit. Context: Model in the black Arch Hoodie, arms crossed, against a raw concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/void-hoodie-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Void Hoodie: The first piece to sell out in Drop 01. Graphite fleece, clean front, dropped shoulders — built to disappear into a city at dusk. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour graphite. Specific view: Back view of the graphite Void Hoodie in an empty parking deck at dusk. Context: Back view of the graphite Void Hoodie in an empty parking deck at dusk. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/void-hoodie-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Void Hoodie: The first piece to sell out in Drop 01. Graphite fleece, clean front, dropped shoulders — built to disappear into a city at dusk. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour graphite. Specific view: Front view, hands in pocket. Context: Back view of the graphite Void Hoodie in an empty parking deck at dusk. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/void-hoodie-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Void Hoodie: The first piece to sell out in Drop 01. Graphite fleece, clean front, dropped shoulders — built to disappear into a city at dusk. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour graphite. Specific view: Close-up of the hood seam. Context: Back view of the graphite Void Hoodie in an empty parking deck at dusk. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/void-hoodie-4.webp",
+    "prompt": "Portrait 4:5 high resolution. Void Hoodie: The first piece to sell out in Drop 01. Graphite fleece, clean front, dropped shoulders — built to disappear into a city at dusk. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour graphite. Specific view: Side profile under street lights. Context: Back view of the graphite Void Hoodie in an empty parking deck at dusk. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/structure-hoodie-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Structure Hoodie: Muted olive fleece with a stiff, structured hood that holds its shape. Unisex sizing — size down for a closer fit. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour olive. Specific view: Model in the olive Structure Hoodie on concrete stairs, overcast sky. Context: Model in the olive Structure Hoodie on concrete stairs, overcast sky. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/structure-hoodie-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Structure Hoodie: Muted olive fleece with a stiff, structured hood that holds its shape. Unisex sizing — size down for a closer fit. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour olive. Specific view: Front close-up of the structured hood. Context: Model in the olive Structure Hoodie on concrete stairs, overcast sky. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/structure-hoodie-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Structure Hoodie: Muted olive fleece with a stiff, structured hood that holds its shape. Unisex sizing — size down for a closer fit. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour olive. Specific view: Detail of the olive fleece texture. Context: Model in the olive Structure Hoodie on concrete stairs, overcast sky. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/mass-hoodie-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Mass Hoodie: Our heaviest fleece yet, with a deep hood that casts its own shadow. Black or washed brown. 480gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Model in the black Mass Hoodie, head down, strong shadow on a concrete wall. Context: Model in the black Mass Hoodie, head down, strong shadow on a concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/mass-hoodie-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Mass Hoodie: Our heaviest fleece yet, with a deep hood that casts its own shadow. Black or washed brown. 480gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Front view in the washed brown colourway. Context: Model in the black Mass Hoodie, head down, strong shadow on a concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/mass-hoodie-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Mass Hoodie: Our heaviest fleece yet, with a deep hood that casts its own shadow. Black or washed brown. 480gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour black. Specific view: Close-up of the deep hood. Context: Model in the black Mass Hoodie, head down, strong shadow on a concrete wall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/core-crewneck-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Core Crewneck: Heavyweight cotton fleece. Oversized fit with dropped shoulders. Raw hem finish. Ribbed cuffs and hem. Unisex sizing. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour black. Specific view: Model in the black Core Crewneck leaning on a concrete ledge, mountains behind. Context: Model in the black Core Crewneck leaning on a concrete ledge, mountains behind. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/core-crewneck-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Core Crewneck: Heavyweight cotton fleece. Oversized fit with dropped shoulders. Raw hem finish. Ribbed cuffs and hem. Unisex sizing. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour black. Specific view: Close-up of the black fleece and collar. Context: Model in the black Core Crewneck leaning on a concrete ledge, mountains behind. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/core-crewneck-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Core Crewneck: Heavyweight cotton fleece. Oversized fit with dropped shoulders. Raw hem finish. Ribbed cuffs and hem. Unisex sizing. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour black. Specific view: Back view against board-marked concrete. Context: Model in the black Core Crewneck leaning on a concrete ledge, mountains behind. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/core-crewneck-4.webp",
+    "prompt": "Portrait 4:5 high resolution. Core Crewneck: Heavyweight cotton fleece. Oversized fit with dropped shoulders. Raw hem finish. Ribbed cuffs and hem. Unisex sizing. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour black. Specific view: Seated on a concrete block, full outfit. Context: Model in the black Core Crewneck leaning on a concrete ledge, mountains behind. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/slab-crewneck-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Slab Crewneck: Garment-dyed loopback in washed brown, with a soft, lived-in hand from the first wear. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour brown. Specific view: Model in the brown Slab Crewneck sitting in an industrial hall. Context: Model in the brown Slab Crewneck sitting in an industrial hall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/slab-crewneck-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Slab Crewneck: Garment-dyed loopback in washed brown, with a soft, lived-in hand from the first wear. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour brown. Specific view: Front view, neutral background. Context: Model in the brown Slab Crewneck sitting in an industrial hall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/slab-crewneck-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Slab Crewneck: Garment-dyed loopback in washed brown, with a soft, lived-in hand from the first wear. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour brown. Specific view: Close-up of the garment-dyed texture. Context: Model in the brown Slab Crewneck sitting in an industrial hall. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/weight-crewneck-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Weight Crewneck: A clean graphite crewneck with a boxy cut. The one you reach for first. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour graphite. Specific view: Model in the graphite Weight Crewneck against dark concrete. Context: Model in the graphite Weight Crewneck against dark concrete. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/weight-crewneck-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Weight Crewneck: A clean graphite crewneck with a boxy cut. The one you reach for first. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour graphite. Specific view: Close-up of the ribbed collar. Context: Model in the graphite Weight Crewneck against dark concrete. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/concrete-pullover-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Concrete Pullover: Marled grey fleece that looks like poured concrete. Relaxed fit, raw hem. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour graphite. Specific view: Model in the marled grey Concrete Pullover on a rooftop, city behind. Context: Model in the marled grey Concrete Pullover on a rooftop, city behind. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/concrete-pullover-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Concrete Pullover: Marled grey fleece that looks like poured concrete. Relaxed fit, raw hem. 380gsm loopback cotton, Boxy fit, dropped shoulders, Raw hem, ribbed cuffs and collar, Made in Portugal. Main colour graphite. Specific view: Close-up of the marled fleece. Context: Model in the marled grey Concrete Pullover on a rooftop, city behind. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/plinth-hoodie-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Plinth Hoodie: A slightly cropped women's cut in ash fleece. Same 400gsm weight, shorter body, wider sleeve. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour ash. Specific view: Model in the ash Plinth Hoodie against a pale concrete wall. Context: Model in the ash Plinth Hoodie against a pale concrete wall. Fictional adult female model."
+  },
+  {
+    "path": "/images/products/plinth-hoodie-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Plinth Hoodie: A slightly cropped women's cut in ash fleece. Same 400gsm weight, shorter body, wider sleeve. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour ash. Specific view: Side view showing the cropped length. Context: Model in the ash Plinth Hoodie against a pale concrete wall. Fictional adult female model."
+  },
+  {
+    "path": "/images/products/plinth-hoodie-3.webp",
+    "prompt": "Portrait 4:5 high resolution. Plinth Hoodie: A slightly cropped women's cut in ash fleece. Same 400gsm weight, shorter body, wider sleeve. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour ash. Specific view: Close-up of the wide sleeve and cuff. Context: Model in the ash Plinth Hoodie against a pale concrete wall. Fictional adult female model."
+  },
+  {
+    "path": "/images/products/logo-tee-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Concrete Logo Tee: Heavy 260gsm jersey with a small tonal CONCRETE wordmark on the chest. Boxy fit. 260gsm cotton jersey, Boxy fit, Tonal chest print, Made in Portugal. Main colour white. Specific view: Model in the white Logo Tee against grey concrete. Context: Model in the white Logo Tee against grey concrete. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/logo-tee-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Concrete Logo Tee: Heavy 260gsm jersey with a small tonal CONCRETE wordmark on the chest. Boxy fit. 260gsm cotton jersey, Boxy fit, Tonal chest print, Made in Portugal. Main colour white. Specific view: Flat lay close-up of the tonal chest wordmark. Context: Model in the white Logo Tee against grey concrete. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/cargo-utility-pants-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Cargo Utility Pants: Heavy cotton twill cargos with flat, low-profile pockets and a tapered leg. 340gsm cotton twill, Six flat pockets, Tapered leg, adjustable hem, Made in Portugal. Main colour black. Specific view: Full-length shot of the black Cargo Utility Pants on concrete steps. Context: Full-length shot of the black Cargo Utility Pants on concrete steps. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/cargo-utility-pants-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Cargo Utility Pants: Heavy cotton twill cargos with flat, low-profile pockets and a tapered leg. 340gsm cotton twill, Six flat pockets, Tapered leg, adjustable hem, Made in Portugal. Main colour black. Specific view: Close-up of the flat side pocket. Context: Full-length shot of the black Cargo Utility Pants on concrete steps. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/studio-overshirt-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Studio Overshirt: Heavy wool-blend overshirt with concealed snaps. Layer it over a tee or under a coat. Wool-blend melton, Concealed snap placket, Two chest pockets, Made in Portugal. Main colour graphite. Specific view: Model in the graphite Studio Overshirt, open, over a white tee. Context: Model in the graphite Studio Overshirt, open, over a white tee. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/studio-overshirt-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Studio Overshirt: Heavy wool-blend overshirt with concealed snaps. Layer it over a tee or under a coat. Wool-blend melton, Concealed snap placket, Two chest pockets, Made in Portugal. Main colour graphite. Specific view: Close-up of the concealed snap placket. Context: Model in the graphite Studio Overshirt, open, over a white tee. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/concrete-cap-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Concrete Cap: Six-panel washed twill cap with a tonal embroidered mark and a metal buckle. Washed cotton twill, Tonal embroidery, Metal buckle, one size. Main colour black. Specific view: The black Concrete Cap on a concrete block, side light. Context: The black Concrete Cap on a concrete block, side light. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/concrete-cap-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Concrete Cap: Six-panel washed twill cap with a tonal embroidered mark and a metal buckle. Washed cotton twill, Tonal embroidery, Metal buckle, one size. Main colour black. Specific view: Close-up of the tonal embroidery. Context: The black Concrete Cap on a concrete block, side light. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/drift-hoodie-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Drift Hoodie: From our pre-launch run. Dark navy fleece, standard fit. What's left is all there is. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour navy. Specific view: Model in the navy Drift Hoodie walking through a brick alley. Context: Model in the navy Drift Hoodie walking through a brick alley. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/drift-hoodie-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Drift Hoodie: From our pre-launch run. Dark navy fleece, standard fit. What's left is all there is. 400gsm brushed-back cotton fleece, Oversized fit, dropped shoulders, Double-layer hood, no drawcords, Raw-edge hem, ribbed cuffs, Made in Portugal. Main colour navy. Specific view: Front close-up of the navy fleece. Context: Model in the navy Drift Hoodie walking through a brick alley. Fictional adult male model."
+  },
+  {
+    "path": "/images/products/ribbed-knit-sweater-1.webp",
+    "prompt": "Portrait 4:5 high resolution. Ribbed Knit Sweater: Heavy ribbed knit with a wide neck. From the archive — final pieces only. Cotton-wool blend rib knit, Relaxed fit, wide neck, Made in Portugal. Main colour ash. Specific view: Model in the ash Ribbed Knit Sweater against a pale wall. Context: Model in the ash Ribbed Knit Sweater against a pale wall. Fictional adult female model."
+  },
+  {
+    "path": "/images/products/ribbed-knit-sweater-2.webp",
+    "prompt": "Portrait 4:5 high resolution. Ribbed Knit Sweater: Heavy ribbed knit with a wide neck. From the archive — final pieces only. Cotton-wool blend rib knit, Relaxed fit, wide neck, Made in Portugal. Main colour ash. Specific view: Close-up of the ribbed knit. Context: Model in the ash Ribbed Knit Sweater against a pale wall. Fictional adult female model."
+  }
+]

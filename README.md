@@ -18,7 +18,7 @@ Accessibility: native dialogs with focus trapping, keyboard-operable pickers, vi
 
 ## Photos
 
-The site ships with placeholders: each frame shows the expected file name and alt text. Drop files with those names into `public/images/…` and they appear automatically.
+The site currently includes 37 of 47 planned AI-generated editorial and product images, created with the built-in imagegen tool and saved as optimized WebP. These depict fictional adult models and illustrative concept garments. Generation briefs: `docs/generation-jobs.json`.
 Full list with briefs: [`docs/IMAGES.md`](docs/IMAGES.md) (regenerate with `npm run images:doc`).
 
 ## Run locally
@@ -40,3 +40,5 @@ docs/IMAGES.md     photo list
 ```
 
 Deployed on Vercel.
+
+Generation paused at the tool usage limit. Ten outstanding shots are marked in docs/IMAGES.md. The logo tee detail image is a composite preview and should be replaced with a dedicated macro shot in the next image pass.
