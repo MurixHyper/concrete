@@ -3,8 +3,10 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: calc(100svh - var(--header-h));
-  max-height: 1080px;
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+  min-height: min(calc(100svh - var(--header-h)), 1080px);
   overflow: hidden;
   isolation: isolate;
 }
@@ -15,6 +17,9 @@
 }
 .heroMedia > div {
   height: 100%;
+}
+.heroMedia img {
+  object-position: center top;
 }
 /* Legibility scrim: dark at the bottom-left where the text sits */
 .heroMedia::after {
