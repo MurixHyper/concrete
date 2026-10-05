@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useStore, lineKey } from "@/lib/store";
-import { COLORS, photoSrc, sizesFor, sizeLabel, products, type Size } from "@/lib/products";
+import { COLORS, photoAlt, photoSrc, sizesFor, sizeLabel, products, type Size } from "@/lib/products";
 import { price } from "@/lib/format";
 import { Photo } from "../Photo";
 import { QtyStepper } from "../QtyStepper";
@@ -62,7 +62,7 @@ export function CartView() {
               return (
                 <li key={key} className={styles.item}>
                   <Link href={`/product/${p.slug}`} className={styles.thumb} tabIndex={-1} aria-hidden="true">
-                    <Photo src={photoSrc(p.slug, 1)} alt={p.shots[0]} sizes="160px" />
+                    <Photo src={photoSrc(p.slug, 1, item.color)} alt={photoAlt(p, 1, item.color)} sizes="160px" />
                   </Link>
                   <div className={styles.info}>
                     <div className={styles.top}>

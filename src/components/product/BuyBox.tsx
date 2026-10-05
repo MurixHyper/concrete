@@ -2,7 +2,8 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { useStore } from "@/lib/store";
-import { COLORS, isSoldOut, sizesFor, sizeLabel, type ColorKey, type Product, type Size } from "@/lib/products";
+import { COLORS, isSoldOut, sizesFor, sizeLabel, type Product, type Size } from "@/lib/products";
+import { useProductVariant } from "./ProductVariant";
 import { price } from "@/lib/format";
 import { WishButton } from "../WishButton";
 import { CheckIcon } from "../Icons";
@@ -12,7 +13,7 @@ import styles from "./BuyBox.module.css";
 
 export function BuyBox({ product: p }: { product: Product }) {
   const { add, openCart } = useStore();
-  const [color, setColor] = useState<ColorKey>(p.colors[0]);
+  const { color, setColor } = useProductVariant();
   const [size, setSize] = useState<Size | null>(p.oneSize ? "M" : null);
   const [error, setError] = useState(false);
   const [added, setAdded] = useState(false);

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useId } from "react";
 import { useStore, lineKey } from "@/lib/store";
-import { COLORS, photoSrc, sizeLabel, FREE_SHIPPING_THRESHOLD } from "@/lib/products";
+import { COLORS, photoAlt, photoSrc, sizeLabel, FREE_SHIPPING_THRESHOLD } from "@/lib/products";
 import { price } from "@/lib/format";
 import { Dialog } from "./Dialog";
 import { Photo } from "./Photo";
@@ -48,7 +48,7 @@ export function MiniCart() {
                 return (
                   <li key={key} className={styles.item}>
                     <Link href={`/product/${p.slug}`} onClick={closeCart} className={styles.thumb} tabIndex={-1} aria-hidden="true">
-                      <Photo src={photoSrc(p.slug, 1)} alt={p.shots[0]} sizes="96px" ratio="4 / 5" />
+                      <Photo src={photoSrc(p.slug, 1, item.color)} alt={photoAlt(p, 1, item.color)} sizes="96px" ratio="4 / 5" />
                     </Link>
                     <div className={styles.info}>
                       <Link href={`/product/${p.slug}`} onClick={closeCart} className={styles.name}>

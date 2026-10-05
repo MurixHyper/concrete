@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { photoSrc, type Product } from "@/lib/products";
+import { COLORS, photoAlt, photoSrc, type ColorKey, type Product } from "@/lib/products";
+import { useProductVariant } from "./ProductVariant";
 import { Photo } from "../Photo";
 import styles from "./Gallery.module.css";
 
@@ -10,6 +11,12 @@ import styles from "./Gallery.module.css";
  * Desktop: all shots stacked in a two-column editorial grid, first one wide.
  */
 export function Gallery({ product: p }: { product: Product }) {
+  const { color } = useProductVariant();
+  // Remount the strip so a colour change resets mobile scroll and its counter.
+  return <ColorGallery key={color} product={p} color={color} />;
+}
+
+function ColorGallery({ product: p, color }: { product: Product; color: ColorKey }) {
   const [index, setIndex] = useState(0);
   const strip = useRef<HTMLUListElement>(null);
   const shots = Array.from({ length: p.photos }, (_, i) => i + 1);
@@ -27,14 +34,14 @@ export function Gallery({ product: p }: { product: Product }) {
         className={styles.strip}
         data-odd={shots.length % 2 === 1}
         onScroll={onScroll}
-        aria-label={`${p.name} photos`}
+        aria-label={`${p.name} ${COLORS[color].name} photos`}
         tabIndex={0}
       >
         {shots.map((n, i) => (
           <li key={n} className={i === 0 ? styles.first : undefined}>
             <Photo
-              src={photoSrc(p.slug, n)}
-              alt={p.shots[i] ?? p.name}
+              src={photoSrc(p.slug, n, color)}
+              alt={photoAlt(p, n, color)}
               sizes="(min-width: 1000px) 30vw, 100vw"
               eager={i === 0}
             />

@@ -59,6 +59,8 @@ export type Product = {
   details: string[];
   /** Which photos exist for this product (see docs/IMAGES.md). */
   photos: number;
+  /** Actual colour of each original shot when a gallery mixes colourways. */
+  photoColors?: ColorKey[];
   /** Photo brief — what each shot should show. Used for alt text and IMAGES.md. */
   shots: string[];
 };
@@ -158,6 +160,7 @@ export const products: Product[] = [
       "Our heaviest fleece yet, with a deep hood that casts its own shadow. Black or washed brown.",
     details: ["480gsm brushed-back cotton fleece", ...hoodieDetails.slice(1)],
     photos: 3,
+    photoColors: ["black", "brown", "black"],
     shots: [
       "Model in the black Mass Hoodie, head down, strong shadow on a concrete wall",
       "Front view in the washed brown colourway",
@@ -174,7 +177,7 @@ export const products: Product[] = [
     badges: ["new"],
     colors: ["black", "graphite", "olive", "navy"],
     stock: { XS: 2, S: 5, M: 1, L: 4, XL: 3, XXL: 2 },
-    tagline: "400gsm. Oversized. No restock",
+    tagline: "380gsm. Oversized. No restock",
     description:
       "Heavyweight cotton fleece. Oversized fit with dropped shoulders. Raw hem finish. Ribbed cuffs and hem. Unisex sizing.",
     details: crewDetails,
@@ -392,7 +395,21 @@ export const products: Product[] = [
 
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
 
-export const photoSrc = (slug: string, n = 1) => `/images/products/${slug}-${n}.webp`;
+export const photoSrc = (slug: string, n = 1, color?: ColorKey) => {
+  const p = getProduct(slug);
+  const originalColor = p?.photoColors?.[n - 1] ?? p?.colors[0];
+  return color && color !== originalColor
+    ? `/images/products/${slug}-${color}-${n}.webp`
+    : `/images/products/${slug}-${n}.webp`;
+};
+
+export const photoAlt = (p: Product, n: number, color: ColorKey) => {
+  const shot = (p.shots[n - 1] ?? p.name).replace(
+    /\b(?:washed brown|marled grey|black|graphite|ash|white|olive|navy|brown)\b/gi,
+    COLORS[color].name.toLowerCase(),
+  );
+  return `${p.name} · ${COLORS[color].name} — ${shot}`;
+};
 
 export const totalStock = (p: Product) =>
   Object.values(p.stock).reduce((a, b) => a + (b ?? 0), 0);

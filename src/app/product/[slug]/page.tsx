@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { products, getProduct, CATEGORY_LABEL } from "@/lib/products";
 import { Gallery } from "@/components/product/Gallery";
 import { BuyBox } from "@/components/product/BuyBox";
+import { ProductVariant } from "@/components/product/ProductVariant";
 import { ProductCard } from "@/components/ProductCard";
 import { PriceTag } from "@/components/PriceTag";
 import styles from "./product.module.css";
@@ -50,47 +51,49 @@ export default async function ProductPage(props: PageProps<"/product/[slug]">) {
           </ol>
         </nav>
 
-        <div className={styles.layout}>
-          <Gallery product={p} />
+        <ProductVariant key={p.slug} product={p}>
+          <div className={styles.layout}>
+            <Gallery product={p} />
 
-          <div className={styles.info}>
-            <div className={styles.sticky}>
-              <p className="eyebrow muted">
-                {p.drop} · {genderLabel}
-              </p>
-              <h1 className={`headline ${styles.title}`}>{p.name}</h1>
-              <PriceTag price={p.price} compareAt={p.compareAt} className={styles.price} />
-              <p className={styles.tagline}>{p.tagline}</p>
+            <div className={styles.info}>
+              <div className={styles.sticky}>
+                <p className="eyebrow muted">
+                  {p.drop} · {genderLabel}
+                </p>
+                <h1 className={`headline ${styles.title}`}>{p.name}</h1>
+                <PriceTag price={p.price} compareAt={p.compareAt} className={styles.price} />
+                <p className={styles.tagline}>{p.tagline}</p>
 
-              <BuyBox product={p} />
+                <BuyBox product={p} />
 
-              <div className={styles.accordion}>
-                <details open>
-                  <summary>Description</summary>
-                  <p>{p.description}</p>
-                </details>
-                <details>
-                  <summary>Details and care</summary>
-                  <ul className={styles.bullets}>
-                    {p.details.map((d) => (
-                      <li key={d}>{d}</li>
-                    ))}
-                    <li>Wash cold, inside out. Dry flat</li>
-                  </ul>
-                </details>
-                <details>
-                  <summary>Shipping and returns</summary>
-                  <ul className={styles.bullets}>
-                    <li>Free standard shipping on orders over €100</li>
-                    <li>Standard 3–5 working days, €6.90</li>
-                    <li>Express 1–2 working days, €14.90</li>
-                    <li>Free returns within 30 days</li>
-                  </ul>
-                </details>
+                <div className={styles.accordion}>
+                  <details open>
+                    <summary>Description</summary>
+                    <p>{p.description}</p>
+                  </details>
+                  <details>
+                    <summary>Details and care</summary>
+                    <ul className={styles.bullets}>
+                      {p.details.map((d) => (
+                        <li key={d}>{d}</li>
+                      ))}
+                      <li>Wash cold, inside out. Dry flat</li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>Shipping and returns</summary>
+                    <ul className={styles.bullets}>
+                      <li>Free standard shipping on orders over €100</li>
+                      <li>Standard 3–5 working days, €6.90</li>
+                      <li>Express 1–2 working days, €14.90</li>
+                      <li>Free returns within 30 days</li>
+                    </ul>
+                  </details>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </ProductVariant>
       </div>
 
       <section className="section" aria-labelledby="look-title">

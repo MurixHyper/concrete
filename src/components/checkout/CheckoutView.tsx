@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { useStore } from "@/lib/store";
-import { COLORS, photoSrc, sizeLabel, SHIPPING } from "@/lib/products";
+import { COLORS, photoAlt, photoSrc, sizeLabel, SHIPPING } from "@/lib/products";
 import { price } from "@/lib/format";
 import { newOrderId, saveOrder } from "@/lib/orders";
 import { Photo } from "../Photo";
@@ -272,7 +272,7 @@ export function CheckoutView() {
               {items.map((i) => (
                 <li key={`${i.slug}-${i.color}-${i.size}`}>
                   <div className={styles.miniThumb}>
-                    <Photo src={photoSrc(i.slug, 1)} alt={i.product.shots[0]} sizes="64px" />
+                    <Photo src={photoSrc(i.slug, 1, i.color)} alt={photoAlt(i.product, 1, i.color)} sizes="64px" />
                     <span className={styles.qty} aria-label={`Quantity ${i.qty}`}>
                       {i.qty}
                     </span>

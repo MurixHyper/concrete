@@ -18,7 +18,7 @@ Accessibility: native dialogs with focus trapping, keyboard-operable pickers, vi
 
 ## Photos
 
-The site includes all 47 planned AI-generated editorial and product images, created with the built-in imagegen tool and saved as optimized WebP. These depict fictional adult models and illustrative concept garments. Generation briefs: `docs/generation-jobs.json`.
+The site includes 120 AI-generated images: the original 47 editorial/product photographs plus 73 colourway photographs. All 40 colourways across 15 products have complete galleries. Images were created with the built-in imagegen tool and saved as optimized WebP; they depict fictional adult models and illustrative concept garments. Original briefs: `docs/generation-jobs.json`. Colour edit prompts and source mapping: `docs/color-generation-jobs.json`.
 Full list with briefs: [`docs/IMAGES.md`](docs/IMAGES.md) (regenerate with `npm run images:doc`).
 
 ## Run locally
