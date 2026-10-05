@@ -40,5 +40,6 @@ The gallery and existing buy box share selected colour through `ProductVariant`.
 - All 120 distinct image paths exist, match filename case, decode as WebP and return HTTP 200 with `image/webp`. All 120 Next.js optimized image URLs also return HTTP 200 and decode at the requested 640px width. 113 product photographs plus 7 editorial photographs.
 - `npm run images:doc`: 120/120 present.
 - `npm run lint`, `npm run build`: passed.
+- Vercel preview deployed successfully; all four Core Crewneck Dark Navy images load in the authenticated browser. The full HTTP sweep ran against local production: unauthenticated requests to the protected Vercel preview return its authentication page.
 
 Run `npm run images:check` for the file/decode check. Set `IMAGE_CHECK_URL` to a running local server to additionally check original and optimized HTTP responses.
