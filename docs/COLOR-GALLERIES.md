@@ -49,3 +49,8 @@ The forced landscape ratio was removed. The wide first shot retains its existing
 - Vercel preview deployed successfully; all four Core Crewneck Dark Navy images load in the authenticated browser. The full HTTP sweep ran against local production: unauthenticated requests to the protected Vercel preview return its authentication page.
 
 Run `npm run images:check` for the file/decode check. Set `IMAGE_CHECK_URL` to a running local server to additionally check original and optimized HTTP responses.
+
+## Product-scoped background loading
+
+Opening a PDP warms only that product's colour galleries after its first photo loads. Two low-priority responsive image requests run at a time, with alternate colours' first shots first. The preloader uses the same Next Image srcset/sizes as the rendered gallery, decodes the images, and stops its queue on navigation. Desktop and 390px mobile colour switches were checked with all Core Crewneck gallery images already complete; no mobile overflow. Lint and production build pass.
+
