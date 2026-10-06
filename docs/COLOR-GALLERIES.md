@@ -30,7 +30,13 @@ All 15 products have multiple colours: 40 colourways in total. 24 colourways had
 
 Each new photograph was edited with the built-in imagegen tool from its corresponding original shot. The prompts constrain edits to garment colour and preserve model identity, pose, crop, garment construction, texture, lighting, concrete surroundings and other clothing. Existing original photographs were retained. New files are WebP at quality 85, without upscaling. The complete source/output mapping and exact prompts are in `color-generation-jobs.json`.
 
-The gallery and existing buy box share selected colour through `ProductVariant`. `photoSrc` resolves every shot, including the mixed original Mass Hoodie colours. Changing colour replaces the entire gallery and resets the mobile strip to shot 1. Size selection persists. Mini-cart, cart and checkout thumbnails use the chosen colour. No CSS or design tokens changed.
+The gallery and existing buy box share selected colour through `ProductVariant`. `photoSrc` resolves every shot, including the mixed original Mass Hoodie colours. Changing colour replaces the entire gallery and resets the mobile strip to shot 1. Size selection persists. Mini-cart, cart and checkout thumbnails use the chosen colour. Layout, typography and design tokens are preserved.
+
+## Framing correction
+
+The desktop gallery previously forced the first portrait into a landscape 5:4 frame when there were three shots. With `object-fit: cover`, this hid 36% of the portrait height, cutting off models' heads and feet. Structure Hoodie, Mass Hoodie, Slab Crewneck and Plinth Hoodie were affected across all nine colourways.
+
+The forced landscape ratio was removed. The wide first shot retains its existing grid placement and the original 4:5 image ratio. All 40 colour galleries were checked at 1280px desktop and 390px mobile widths: 226 rendered frames retain 4:5 with no page overflow. The four affected products also pass at 999px, 1000px and 1440px widths. All 15 catalogue cards retain 4:5; home editorial portraits and the square fabric photograph use matching frames. The responsive home hero retains both models' faces.
 
 ## Validation
 

@@ -41,9 +41,7 @@
   .strip[data-odd="true"] > .first {
     grid-column: 1 / -1;
   }
-  .strip[data-odd="true"] > .first > div {
-    aspect-ratio: 5 / 4 !important;
-  }
+  /* Keep the original 4:5 photo ratio even when the first shot spans both columns. */
   .counter {
     display: none;
   }
