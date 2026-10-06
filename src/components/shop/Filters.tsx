@@ -1,9 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useEffect, useId, useRef, useState, useTransition } from "react";
 import { COLORS, CATEGORY_LABEL, SIZES, type Category, type ColorKey } from "@/lib/products";
-import { DROPS, GENDERS, SORTS, toQuery, activeCount, type Filters, type SortKey } from "@/lib/filters";
+import { DROPS, GENDERS, SORTS, toQuery, activeCount, type Filters } from "@/lib/filters";
 import { Dialog } from "../Dialog";
 import { CloseIcon, ChevronIcon } from "../Icons";
 import styles from "./Filters.module.css";
@@ -167,22 +167,62 @@ export function ActiveChips({ filters }: { filters: Filters }) {
 
 export function SortSelect({ filters }: { filters: Filters }) {
   const { go } = useFilterNav();
+  const [open, setOpen] = useState(false);
+  const root = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const id = useId();
+  const selected = SORTS.findIndex((s) => s.value === filters.sort);
+  useEffect(() => {
+    if (!open) return;
+    root.current?.querySelectorAll<HTMLButtonElement>('[role="menuitemradio"]')[selected]?.focus();
+    const outside = (event: PointerEvent) => {
+      if (!root.current?.contains(event.target as Node)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, [open, selected]);
+  const close = () => { setOpen(false); trigger.current?.focus(); };
   return (
-    <label className={styles.sort}>
-      <span className="sr-only">Sort by</span>
-      <select
-        value={filters.sort}
-        onChange={(e) => go({ ...filters, sort: e.target.value as SortKey })}
+    <div ref={root} className={styles.sort} onBlur={(event) => {
+      if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+    }}>
+      <button
+        ref={trigger}
+        type="button"
+        aria-label={`Sort by: ${SORTS[selected].label}`}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-controls={open ? id : undefined}
+        onClick={() => setOpen((value) => !value)}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault(); setOpen(true);
+          } else if (event.key === "Escape") close();
+        }}
         className={styles.select}
       >
-        {SORTS.map((s) => (
-          <option key={s.value} value={s.value}>
-            {s.label}
-          </option>
-        ))}
-      </select>
-      <ChevronIcon width={16} height={16} />
-    </label>
+        {SORTS[selected].label}
+        <ChevronIcon width={16} height={16} />
+      </button>
+      {open && <div id={id} role="menu" aria-label="Sort by" className={styles.sortMenu}
+        onKeyDown={(event) => {
+          const items = Array.from(event.currentTarget.querySelectorAll<HTMLButtonElement>("button"));
+          const current = items.indexOf(document.activeElement as HTMLButtonElement);
+          if (event.key === "Escape") { event.preventDefault(); close(); }
+          else if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+            event.preventDefault();
+            const next = event.key === "Home" ? 0 : event.key === "End" ? items.length - 1
+              : (current + (event.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+            items[next].focus();
+          }
+        }}>
+        {SORTS.map((s) => <button key={s.value} type="button" role="menuitemradio"
+          aria-checked={filters.sort === s.value} className={styles.sortOption}
+          onClick={() => { close(); go({ ...filters, sort: s.value }); }}>
+          {s.label}<span aria-hidden="true">{filters.sort === s.value ? "✓" : ""}</span>
+        </button>)}
+      </div>}
+    </div>
   );
 }
 
