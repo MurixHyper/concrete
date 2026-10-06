@@ -6,6 +6,9 @@
   gap: var(--s2);
   margin-bottom: var(--s5);
 }
+.top h1 {
+  overflow-wrap: anywhere;
+}
 .toolbar {
   position: sticky;
   top: var(--header-h);

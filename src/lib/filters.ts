@@ -123,8 +123,22 @@ export function activeCount(f: Filters) {
 }
 
 export function pageTitle(f: Filters) {
-  if (f.drop.length === 1 && f.drop[0] === "archive") return "Archive";
-  if (f.category.length === 1 && !f.gender.length) return CATEGORY_LABEL[f.category[0]];
-  if (f.gender.length === 1 && !f.category.length) return GENDERS.find((g) => g.value === f.gender[0])!.label;
-  return "Shop all";
+  return shopSections(f).map((section) => section.label).join(" / ") || (activeCount(f) ? "Filtered pieces" : "Shop all");
+}
+
+/** Each ancestor keeps the broader selection and removes narrower filters. */
+export function shopSections(f: Filters) {
+  const ancestors: Filters = { gender: [], category: [], color: [], size: [], drop: [], sort: "featured" };
+  const sections: { label: string; href: string }[] = [];
+  for (const key of ["drop", "gender", "category"] as const) {
+    if (!f[key].length) continue;
+    const label = key === "drop"
+      ? f.drop.map((value) => DROPS.find((d) => d.value === value)!.label).join(" & ")
+      : key === "gender"
+        ? f.gender.map((value) => GENDERS.find((g) => g.value === value)!.label).join(" & ")
+        : f.category.map((value) => CATEGORY_LABEL[value]).join(" & ");
+    Object.assign(ancestors, { [key]: f[key] });
+    sections.push({ label, href: `/shop${toQuery(ancestors)}` });
+  }
+  return sections;
 }

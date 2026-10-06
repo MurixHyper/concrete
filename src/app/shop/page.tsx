@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { applyFilters, parseFilters, pageTitle, activeCount } from "@/lib/filters";
+import { applyFilters, parseFilters, pageTitle, shopSections, activeCount } from "@/lib/filters";
 import { FilterPanel, ActiveChips, SortSelect, MobileFilters } from "@/components/shop/Filters";
 import { ProductGrid } from "@/components/shop/ProductGrid";
 import styles from "./shop.module.css";
@@ -15,16 +15,20 @@ export default async function ShopPage(props: PageProps<"/shop">) {
   const results = applyFilters(f);
   const title = pageTitle(f);
   const n = activeCount(f);
+  const sections = shopSections(f);
 
   return (
     <div className={`container ${styles.page}`}>
       <header className={styles.top}>
         <nav aria-label="Breadcrumb" className="breadcrumbs">
           <ol>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li aria-current="page">{title}</li>
+            {n ? <li><Link href="/shop">Shop all</Link></li> : <li aria-current="page">Shop all</li>}
+            {sections.map((section, index) => (
+              index === sections.length - 1
+                ? <li key={section.href} aria-current="page">{section.label}</li>
+                : <li key={section.href}><Link href={section.href}>{section.label}</Link></li>
+            ))}
+            {n > 0 && !sections.length && <li aria-current="page">{title}</li>}
           </ol>
         </nav>
         <h1 className="display">{title}</h1>
